@@ -84,9 +84,10 @@ $(document).ready(function(){
 	
 
     //КЛик на чекбокс TODO
-    $('.checkbox_class').on('change', function(){ 
+    $(document).on('change', '.checkbox_class', function(){ 
 	   var dataArray = JSON.parse(localStorage.getItem("data"));
 	   var tr = $(this).closest('tr');
+	   console.log('HEY');
 
 	   for( i=0; i<dataArray.length; i++) {
 		    if( dataArray[i].id == tr.attr('data-id')){
